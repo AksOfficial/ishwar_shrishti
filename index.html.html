@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishwar Srishti - Naturopathy Hospital & Gau Conservation Center</title>
+    <meta name="description" content="Ishwar Srishti - Naturopathy Hospital & Gau Conservation Center in Sikar, Rajasthan. Natural healing, cow protection, and organic farming since 2018.">
+    <meta name="keywords" content="naturopathy, gaushala, cow protection, organic farming, natural healing, Sikar, Rajasthan">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .contact-bar {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff6b35;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #ff6b35;
+        }
+
+        .lang-toggle {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23228B22" width="1200" height="600"/><circle fill="%23FFD700" cx="200" cy="100" r="50"/><rect fill="%238B4513" x="100" y="400" width="200" height="150"/><polygon fill="%23FF6347" points="100,400 200,300 300,400"/><ellipse fill="%23FFF" cx="600" cy="300" rx="80" ry="40"/><rect fill="%23654321" x="580" y="320" width="40" height="60"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #FFD700;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        /* Current Scenario */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .scenario-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .scenario-card .icon {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        .scenario-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .scenario-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .scenario-card .current-work {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            color: #ff6b35;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .unit-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .unit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .unit-card .image {
+            height: 200px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .unit-card .content {
+            padding: 1.5rem;
+        }
+
+        .unit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .unit-card ul {
+            list-style: none;
+            color: #666;
+        }
+
+        .unit-card li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .unit-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        /* Milestones */
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 30px;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 45%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -6px;
+            width: 12px;
+            height: 12px;
+            background: #ff6b35;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #ff6b35;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: auto;
+            left: -6px;
+        }
+
+        /* Stats */
+        .stats {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Gaushala Section */
+        .gaushala {
+            background: #f8f9fa;
+        }
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .donation-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid #ff6b35;
+        }
+
+        .donation-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        /* Hospital Section */
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .treatment-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .treatment-card h4 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        /* Founder Section */
+        .founder {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .founder-image {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            margin: 0 auto;
+        }
+
+        /* Gallery */
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border: 2px solid #ff6b35;
+            background: transparent;
+            color: #ff6b35;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: #ff6b35;
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            height: 200px;
+            background: linear-gradient(135deg, #ddd, #bbb);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #666;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item .icon {
+            font-size: 1.5rem;
+            color: #ff6b35;
+            width: 40px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer-links a:hover {
+            color: #ff6b35;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            z-index: 1000;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd) {
+                justify-content: flex-start;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-item::after,
+            .timeline-item:nth-child(odd)::after {
+                left: 14px;
+                right: auto;
+            }
+
+            .founder {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 60px 3%;
+            }
+
+            .founder-image {
+                width: 200px;
+                height: 200px;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="contact-bar">
+            <i class="fas fa-phone"></i> +91-9137485206 | 
+            <i class="fas fa-envelope"></i> info@ishwarsrishti.org
+        </div>
+        <nav class="nav">
+            <a href="#home" class="logo">Ishwar Srishti</a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gaushala">Gau Seva</a></li>
+                <li><a href="#hospital">Healing</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
+            <button class="lang-toggle">हिन्दी</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Ishwar Srishti</h1>
+            <p class="tagline">आओ चलें प्रकृति की ओर</p>
+            <p class="subtitle">Naturopathy Hospital & Gau Conservation Center | Since 2018</p>
+            <p class="subtitle">Dinarpura, Sikar, Rajasthan</p>
+            <div class="cta-buttons">
+                <a href="#gaushala" class="btn btn-primary">Support Gaushala</a>
+                <a href="#hospital" class="btn btn-secondary">Book Treatment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Scenario -->
+    <section class="section">
+        <h2 class="section-title">Current Challenges in Society</h2>
+        <div class="scenario-grid">
+            <div class="scenario-card">
+                <div class="icon">🐄</div>
+                <h3>Cow Protection</h3>
+                <p>Indigenous cow breeds declining rapidly due to modernization and lack of awareness</p>
+                <div class="current-work">45 cows under protection</div>
+            </div>
+            <div class="scenario-card">
+                <div class="icon">🏥</div>
+                <h3>Healthcare</h3>
+                <p>Rising chronic diseases in urban areas due to lifestyle and environmental factors</p>
+                <div class="current-work">Natural treatment center operational</div>
+            </div>
+            <div class="scenario-card">
+                <div class="icon">🌱</div>
+                <h3>Agriculture</h3>
+                <p>Chemical farming affecting health and soil quality, disconnection from traditional methods</p>
+                <div class="current-work">600+ trees, organic farming model</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; font-size: 1.2rem; color: #666;">
+            <strong>Ishwar Srishti addresses these challenges through practical initiatives.</strong>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <h2 class="section-title">About Ishwar Srishti</h2>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <p style="font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto;">
+                Founded in 2018 on 9 acres in Dinarpura, Sikar. Registered Naturopathy Hospital (E34206(M)) 
+                committed to natural healing, cow protection, and sustainable agriculture.
+            </p>
+        </div>
+        <div class="units-grid">
+            <div class="unit-card">
+                <div class="image">🐄</div>
+                <div class="content">
+                    <h3>Nandini Gaushala</h3>
+                    <ul>
+                        <li>Established: March 2019</li>
+                        <li>Current: 45 indigenous cows</li>
+                        <li>Products: 16 Panchgavya medicines</li>
+                        <li>Breeds: Tharparkar, Rathi, Sahiwal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="unit-card">
+                <div class="image">🏥</div>
+                <div class="content">
+                    <h3>Naturopathy Hospital</h3>
+                    <ul>
+                        <li>Established: November 2018</li>
+                        <li>Capacity: 40 beds</li>
+                        <li>Treatments: Panchakarma, Physiotherapy</li>
+                        <li>Registration: E34206(M)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="unit-card">
+                <div class="image">🌾</div>
+                <div class="content">
+                    <h3>Organic Agriculture</h3>
+                    <ul>
+                        <li>Area: 9 acres</li>
+                        <li>Trees: 600+ (25 species)</li>
+                        <li>Method: 100% cow-based farming</li>
+                        <li>Pesticide-free cultivation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="unit-card">
+                <div class="image">🎓</div>
+                <div class="content">
+                    <h3>Future Plans</h3>
+                    <ul>
+                        <li>Ved Vidyapeetham (Proposed)</li>
+                        <li>Expansion to 100 cows</li>
+                        <li>Research laboratory</li>
+                        <li>Training programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones -->
+    <section class="section">
+        <h2 class="section-title">Project Milestones</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Foundation Stone</h4>
+                    <p><strong>February 13, 2018</strong></p>
+                    <p>Organic garden foundation stone laid by Pujya Raghavacharya Ji & Hastimal Ji</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Hospital Foundation</h4>
+                    <p><strong>July 22, 2018</strong></p>
+                    <p>Naturopathy hospital foundation stone ceremony</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Hospital Operational</h4>
+                    <p><strong>November 18, 2018</strong></p>
+                    <p>40-bed hospital becomes fully operational</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Gaushala Launch</h4>
+                    <p><strong>March 13, 2019</strong></p>
+                    <p>Nandini Gaushala inaugurated with first batch of cows</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Current Status</h4>
+                    <p><strong>2024</strong></p>
+                    <p>Fully operational with 45+ cows, 600+ trees, and established treatment center</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section stats">
+        <h2 class="section-title" style="color: white;">Key Achievements</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">45+</div>
+                <div class="stat-label">Indigenous Cows</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">600+</div>
+                <div class="stat-label">Trees Planted</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">40</div>
+                <div class="stat-label">Bed Capacity</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">16</div>
+                <div class="stat-label">Panchgavya Medicines</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">9</div>
+                <div class="stat-label">Acres Under Organic Farming</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaushala Section -->
+    <section id="gaushala" class="section gaushala">
+        <h2 class="section-title">Nandini Gau Seva Sansthan</h2>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <p style="font-size: 1.2rem; color: #666;">Established March 13, 2019 | 45+ Indigenous Cows</p>
+        </div>
+        
+        <div style="margin-bottom: 3rem;">
+            <h3 style="text-align: center; margin-bottom: 2rem;">Current Operations</h3>
+            <div class="units-grid">
+                <div class="unit-card">
+                    <div class="image">🐄</div>
+                    <div class="content">
+                        <h3>Cow Conservation</h3>
+                        <ul>
+                            <li>Total Cows: 45+</li>
+                            <li>Breeds: Tharparkar, Rathi, Sahiwal</li>
+                            <li>Daily care and medical treatment</li>
+                            <li>Proper shelter and nutrition</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="unit-card">
+                    <div class="image">💊</div>
+                    <div class="content">
+                        <h3>Product Manufacturing</h3>
+                        <ul>
+                            <li>16 Panchgavya medicines</li>
+                            <li>Gau Ghrit: ₹2,100/L</li>
+                            <li>Gau Mutra Ark</li>
+                            <li>Takrarishta</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="unit-card">
+                    <div class="image">🌾</div>
+                    <div class="content">
+                        <h3>Agricultural Support</h3>
+                        <ul>
+                            <li>Organic manure production</li>
+                            <li>Biogas generation (planned)</li>
+                            <li>Support to local farmers</li>
+                            <li>Sustainable farming methods</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="text-align: center
